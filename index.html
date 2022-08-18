@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SASS Library</title>
+    <link rel="stylesheet" href="./scss/main.css">
+</head>
+<body>
+    
+    <div class="cards-grid">
+
+        <div class="card">
+            <div class="image-container">
+                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg">
+            </div>
+            <div class="info">
+                <div class="category">
+                    <p>
+                        Travel
+                    </p>
+                </div>
+                <div class="article-heading">
+                    <h1>
+                        Trip Planning For Total Beginners
+                    </h1>
+                </div>
+                <div class="description">
+                    <p>
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, rerum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                        Fugit, autem.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@500&display=swap');
+
+        body {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        p, h1 {
+            margin: 0;
+            padding: 0;
+        }
+
+        .cards-grid img {
+            width: 100%;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+        }
+
+        .cards-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
+            justify-items: space-around;
+            align-items: center;
+            gap: 20px;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+
+        .info {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .card .image-container {
+            display: flex;
+        }
+
+        .card .category {
+            margin: 20px 10px;
+        }
+
+        .card .category p {
+            font-family: 'Roboto', sans-serif;
+            text-transform: uppercase;
+            color: #8f96a2;
+        }
+
+        .article-heading {
+            padding-right: 50px;
+            padding-left: 50px;
+        }
+
+        .article-heading h1 {
+            font-family: 'Roboto', sans-serif;
+            color: #2c4170;
+        }
+
+        .card .description {
+            padding: 40px ;
+        }
+
+        .card .description p {
+            font-family: 'Roboto', sans-serif;
+        
+            text-align: center;
+        }
+        
+        
+
+
+    </style>
+
+</body>
+</html>
