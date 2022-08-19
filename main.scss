@@ -111,6 +111,8 @@ a {
     grid-column: 3 / 4;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: min-content 1fr;
+    align-self: start;
 
     .section-title,
     .reading {
