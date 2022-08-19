@@ -4,122 +4,115 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SASS Library</title>
-    <link rel="stylesheet" href="./scss/main.css">
+    <title>Mars Weather App</title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="scripts/index.js" defer></script>
 </head>
 <body>
     
-    <div class="cards-grid">
+    <main class="mars-current-weather">
+        <h1 class="main-title">
+            Latest Weather At Elysium Plantitia
+        </h1>
 
-        <div class="card">
-            <div class="image-container">
-                <img src="https://upload.wikimedia.org/wikipedia/commons/e/e7/Everest_North_Face_toward_Base_Camp_Tibet_Luca_Galuzzi_2006.jpg">
-            </div>
-            <div class="info">
-                <div class="category">
-                    <p>
-                        Travel
-                    </p>
-                </div>
-                <div class="article-heading">
-                    <h1>
-                        Trip Planning For Total Beginners
-                    </h1>
-                </div>
-                <div class="description">
-                    <p>
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Nemo, rerum. Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                        Fugit, autem.
-                    </p>
-                </div>
+        <div class="date">
+            <h2 class="section-title section-title--date">
+                Sol 377
+            </h2>
+            <p class="date__day">
+                September 31
+            </p>
+        </div>
+
+        <div class="temp">
+            <h2 class="section-title">
+                Temperature
+            </h2>
+            <p class="reading">
+                High: -20C
+            </p>
+            <p class="reading">
+                Low: -980C
+            </p>
+        </div>
+
+        <div class="wind">
+            <h2 class="section-title">
+                Wind
+            </h2>
+
+            <p class="reading">
+                76km/h
+            </p>
+
+            <div class="wind__direction">
+                <p class="sr-only">
+                    45deg
+                </p>
+                <div class="wind__arrow"></div>
             </div>
         </div>
 
+        <div class="info">
+            <p>InSight is taking daily weather mesurements (temperature,
+                wind, pressure) on the surface of Mars at Elysium Planitia,
+                a flat, smooth plain near Mars`s equator
+            </p>
+            <p>
+                This is only part of InSight`s mission
+                <a href="https://mars.nasa.gov/insight/mission/overview">
+                    Click here 
+                </a>
+                to find out more.
+            </p>
+        </div>
+
+        <div class="unit">
+            <label for="cel">.C</label>
+            <input type="radio" id="cel" name="unit" checked>
+            <!-- when unit toggle is clicked, checkbox need to change -->
+            <button class="unit__toggle"></button>
+            <label for="fah">.F</label>
+            <input type="radio" id="fah" name="unit">
+        </div>
+
+    </main>
+
+
+
+
+    <div class="previous-weather">
+        <label for="weather-toggle" class="show-previous-weather-label">
+            &#8593; <span sr-only>Show previous weather</span>
+        </label>
+
+        <input type="checkbox" id="weather-toggle"
+        class="show-previous-weather-toggle">
+
+        <h2 class="main-title">Previous 7 days</h2>
+
+        <div class="previous-days">
+            <div class="previous-day">
+                <h3 class="previous-day__sol">
+                    Sol 371
+                </h3>
+                <p class="previous-day__date">
+                    September 31
+                </p>
+                <p class="previous-day__temp">
+                    High: -20C
+                </p>
+                <p class="previous-day__temp">
+                    Low: -980C
+                </p>
+                <button class="previous-day__more-info">
+                    more info
+                </button>
+            </div>
+        </div>
     </div>
 
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Roboto:wght@500&display=swap');
-
-        body {
-            max-width: 1100px;
-            margin: 0 auto;
-        }
-
-        p, h1 {
-            margin: 0;
-            padding: 0;
-        }
-
-        .cards-grid img {
-            width: 100%;
-            border-top-left-radius: 10px;
-            border-top-right-radius: 10px;
-        }
-
-        .cards-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(min(350px, 100%), 1fr));
-            justify-items: space-around;
-            align-items: center;
-            gap: 20px;
-            border: 1px solid black;
-            padding: 5px;
-        }
-
-        .card {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-
-            border: 1px solid black;
-            border-radius: 10px;
-        }
-
-        .info {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .card .image-container {
-            display: flex;
-        }
-
-        .card .category {
-            margin: 20px 10px;
-        }
-
-        .card .category p {
-            font-family: 'Roboto', sans-serif;
-            text-transform: uppercase;
-            color: #8f96a2;
-        }
-
-        .article-heading {
-            padding-right: 50px;
-            padding-left: 50px;
-        }
-
-        .article-heading h1 {
-            font-family: 'Roboto', sans-serif;
-            color: #2c4170;
-        }
-
-        .card .description {
-            padding: 40px ;
-        }
-
-        .card .description p {
-            font-family: 'Roboto', sans-serif;
-            text-align: center;
-        }
-        
-        
-
-
-    </style>
 
 </body>
 </html>
