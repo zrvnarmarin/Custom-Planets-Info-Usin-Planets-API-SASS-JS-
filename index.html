@@ -7,7 +7,7 @@
     <title>Mars Weather App</title>
     <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
-    <script src="scripts/index.js" defer></script>
+    <script src="index.js" defer></script>
 </head>
 <body>
     
@@ -30,10 +30,10 @@
                 Temperature
             </h2>
             <p class="reading">
-                High: -20C
+                High: -20°C
             </p>
             <p class="reading">
-                Low: -980C
+                Low: -980°C
             </p>
         </div>
 
@@ -69,11 +69,11 @@
         </div>
 
         <div class="unit">
-            <label for="cel">.C</label>
+            <label for="cel">°C</label>
             <input type="radio" id="cel" name="unit" checked>
             <!-- when unit toggle is clicked, checkbox need to change -->
             <button class="unit__toggle"></button>
-            <label for="fah">.F</label>
+            <label for="fah">°F</label>
             <input type="radio" id="fah" name="unit">
         </div>
 
@@ -81,18 +81,110 @@
 
 
 
-
+<!-- ako ugasimo show-weather klasu, strelica seo krene gore i spusti 
+ostatak info-a dolje -->
     <div class="previous-weather">
-        <label for="weather-toggle" class="show-previous-weather-label">
-            &#8593; <span sr-only>Show previous weather</span>
-        </label>
+        <button for="weather-toggle" class="show-previous-weather">
+            <span>&#8593;</span>
+            <!-- &#8593; <span sr-only>Show previous weather</span> -->
+        </button>
 
-        <input type="checkbox" id="weather-toggle"
-        class="show-previous-weather-toggle">
+        <!-- <input type="checkbox" id="weather-toggle"
+        class="show-previous-weather-toggle"> -->
 
-        <h2 class="main-title">Previous 7 days</h2>
+        <h2 class="main-title previous-weather__title">Previous 7 days</h2>
 
         <div class="previous-days">
+            <div class="previous-day">
+                <h3 class="previous-day__sol">
+                    Sol 371
+                </h3>
+                <p class="previous-day__date">
+                    September 31
+                </p>
+                <p class="previous-day__temp">
+                    High: -20C
+                </p>
+                <p class="previous-day__temp">
+                    Low: -980C
+                </p>
+                <button class="previous-day__more-info">
+                    more info
+                </button>
+            </div>
+
+            <div class="previous-day">
+                <h3 class="previous-day__sol">
+                    Sol 371
+                </h3>
+                <p class="previous-day__date">
+                    September 31
+                </p>
+                <p class="previous-day__temp">
+                    High: -20C
+                </p>
+                <p class="previous-day__temp">
+                    Low: -980C
+                </p>
+                <button class="previous-day__more-info">
+                    more info
+                </button>
+            </div>
+
+            <div class="previous-day">
+                <h3 class="previous-day__sol">
+                    Sol 371
+                </h3>
+                <p class="previous-day__date">
+                    September 31
+                </p>
+                <p class="previous-day__temp">
+                    High: -20C
+                </p>
+                <p class="previous-day__temp">
+                    Low: -980C
+                </p>
+                <button class="previous-day__more-info">
+                    more info
+                </button>
+            </div>
+
+            <div class="previous-day">
+                <h3 class="previous-day__sol">
+                    Sol 371
+                </h3>
+                <p class="previous-day__date">
+                    September 31
+                </p>
+                <p class="previous-day__temp">
+                    High: -20C
+                </p>
+                <p class="previous-day__temp">
+                    Low: -980C
+                </p>
+                <button class="previous-day__more-info">
+                    more info
+                </button>
+            </div>
+
+            <div class="previous-day">
+                <h3 class="previous-day__sol">
+                    Sol 371
+                </h3>
+                <p class="previous-day__date">
+                    September 31
+                </p>
+                <p class="previous-day__temp">
+                    High: -20C
+                </p>
+                <p class="previous-day__temp">
+                    Low: -980C
+                </p>
+                <button class="previous-day__more-info">
+                    more info
+                </button>
+            </div>
+
             <div class="previous-day">
                 <h3 class="previous-day__sol">
                     Sol 371
